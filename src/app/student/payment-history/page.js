@@ -2,7 +2,9 @@
 import {  useState } from "react";
 import StudentDashboardLayout from "@/app/student_dashboard_layout/layout";
 import { useAuth } from "@/app/common/auth-context";
-import { EyeIcon, EyeOffIcon } from "@heroicons/react/solid";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
 export default function PaymentDetails() {
   const [showTransactionId, setShowTransactionId] = useState({});
@@ -98,11 +100,8 @@ export default function PaymentDetails() {
                       onClick={() => toggleTransactionId(index)}
                       className="ml-2 text-teal-500 hover:text-teal-700 transition"
                     >
-                      {showTransactionId[index] ? (
-                        <EyeOffIcon className="h-5 w-5 inline" />
-                      ) : (
-                        <EyeIcon className="h-5 w-5 inline" />
-                      )}
+                      <FontAwesomeIcon icon={showTransactionId[index] ? faEyeSlash : faEye} className="h-5 w-5" />
+
                     </button>
                   </p>
                   <p>Amount: {payment.amount}</p>

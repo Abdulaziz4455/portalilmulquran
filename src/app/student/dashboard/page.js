@@ -5,7 +5,7 @@ import {
   BanknotesIcon,
   CreditCardIcon,
   ClockIcon,
-} from "@heroicons/react/24/outline";
+} from "@heroicons/react/outline";
 
 import Link from "next/link";
 

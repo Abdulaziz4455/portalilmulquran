@@ -11,11 +11,18 @@
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "axios": "^1.7.9",
+    "bcrypt": "^5.1.1",
     "heroicons": "^2.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "moment-timezone": "^0.5.47",
+    "mongoose": "^8.10.1",
     "next": "15.1.7",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-icons": "^5.5.0"
+    "nodemailer": "^6.10.0",
+    "papaparse": "^5.5.2",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^5.5.0",
+    "react-toastify": "^11.0.3"
   },
   "devDependencies": {
     "postcss": "^8",

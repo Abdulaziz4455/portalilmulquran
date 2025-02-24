@@ -1,14 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
-import {
-  AcademicCapIcon,
-  BanknotesIcon,
-  CreditCardIcon,
-  ClockIcon,
-} from "@heroicons/react/outline";
-
+import { faGraduationCap, faMoneyBill, faCreditCard, faClock } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-
 import StudentDashboardLayout from "@/app/student_dashboard_layout/layout";
 
 export default function DashboardPage() {
@@ -50,11 +44,8 @@ export default function DashboardPage() {
     return () => clearInterval(interval);
   }, []);
 
-
-
   return (
     <>
-    
       <title>ilmulQuran Student Dashboard</title>
       <StudentDashboardLayout>
         <div className="pt-4 min-h-screen ">
@@ -83,14 +74,10 @@ export default function DashboardPage() {
               {/* Class Schedule Card */}
               <Link href="/student/class-schedule">
                 <div className="flex items-center bg-gray-100 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-200">
-                  <ClockIcon className="h-8 w-8 mr-3 text-teal-500" />
+                  <FontAwesomeIcon icon={faClock} className="h-8 w-8 mr-3 text-teal-500" />
                   <div>
-                    <h3 className="text-base font-medium text-gray-700">
-                      Class Schedule
-                    </h3>
-                    <p className="text-xs text-gray-500">
-                      View your upcoming classes and their schedules.
-                    </p>
+                    <h3 className="text-base font-medium text-gray-700">Class Schedule</h3>
+                    <p className="text-xs text-gray-500">View your upcoming classes and their schedules.</p>
                   </div>
                 </div>
               </Link>
@@ -98,14 +85,10 @@ export default function DashboardPage() {
               {/* Invoice Info Card */}
               <Link href="/student/invoice-info">
                 <div className="flex items-center bg-gray-100 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-200">
-                  <BanknotesIcon className="h-8 w-8 mr-3 text-teal-500" />
+                  <FontAwesomeIcon icon={faMoneyBill} className="h-8 w-8 mr-3 text-teal-500" />
                   <div>
-                    <h3 className="text-base font-medium text-gray-700">
-                      Invoice Info
-                    </h3>
-                    <p className="text-xs text-gray-500">
-                      Access your latest invoices and billing details.
-                    </p>
+                    <h3 className="text-base font-medium text-gray-700">Invoice Info</h3>
+                    <p className="text-xs text-gray-500">Access your latest invoices and billing details.</p>
                   </div>
                 </div>
               </Link>
@@ -113,14 +96,10 @@ export default function DashboardPage() {
               {/* Payments History Card */}
               <Link href="/student/payment-history">
                 <div className="flex items-center bg-gray-100 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-200">
-                  <CreditCardIcon className="h-8 w-8 mr-3 text-teal-500" />
+                  <FontAwesomeIcon icon={faCreditCard} className="h-8 w-8 mr-3 text-teal-500" />
                   <div>
-                    <h3 className="text-base font-medium text-gray-700">
-                      Payments History
-                    </h3>
-                    <p className="text-xs text-gray-500">
-                      Review your payments and transaction history.
-                    </p>
+                    <h3 className="text-base font-medium text-gray-700">Payments History</h3>
+                    <p className="text-xs text-gray-500">Review your payments and transaction history.</p>
                   </div>
                 </div>
               </Link>
@@ -128,14 +107,10 @@ export default function DashboardPage() {
               {/* Pay Now Card */}
               <Link href="/student/payment">
                 <div className="flex items-center bg-gray-100 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-200">
-                  <AcademicCapIcon className="h-8 w-8 mr-3 text-teal-500" />
+                  <FontAwesomeIcon icon={faGraduationCap} className="h-8 w-8 mr-3 text-teal-500" />
                   <div>
-                    <h3 className="text-base font-medium text-gray-700">
-                      Pay Now
-                    </h3>
-                    <p className="text-xs text-gray-500">
-                      Make a payment for your upcoming classes.
-                    </p>
+                    <h3 className="text-base font-medium text-gray-700">Pay Now</h3>
+                    <p className="text-xs text-gray-500">Make a payment for your upcoming classes.</p>
                   </div>
                 </div>
               </Link>

@@ -1,6 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
-import axios from "axios";
+import {  useState } from "react";
 import StudentDashboardLayout from "@/app/student_dashboard_layout/layout";
 import { useAuth } from "@/app/common/auth-context";
 import { EyeIcon, EyeOffIcon } from "@heroicons/react/solid";

@@ -2,10 +2,11 @@
 import { useEffect, useState } from "react";
 import {
   AcademicCapIcon,
-  CashIcon,
+  BanknotesIcon,
   CreditCardIcon,
   ClockIcon,
-} from "@heroicons/react/outline";
+} from "@heroicons/react/24/outline";
+
 import Link from "next/link";
 
 import StudentDashboardLayout from "@/app/student_dashboard_layout/layout";
@@ -49,8 +50,11 @@ export default function DashboardPage() {
     return () => clearInterval(interval);
   }, []);
 
+
+
   return (
     <>
+    
       <title>ilmulQuran Student Dashboard</title>
       <StudentDashboardLayout>
         <div className="pt-4 min-h-screen ">
@@ -94,7 +98,7 @@ export default function DashboardPage() {
               {/* Invoice Info Card */}
               <Link href="/student/invoice-info">
                 <div className="flex items-center bg-gray-100 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-200">
-                  <CashIcon className="h-8 w-8 mr-3 text-teal-500" />
+                  <BanknotesIcon className="h-8 w-8 mr-3 text-teal-500" />
                   <div>
                     <h3 className="text-base font-medium text-gray-700">
                       Invoice Info
